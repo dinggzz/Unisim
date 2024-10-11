@@ -1,4 +1,6 @@
-![Backlogged logo](/images/backlogged.png "Backlogged logo")
+<p align="center"; width=50%; height=50%>
+  <img src="images/backlogged.png" alt="Backlogged logo"/>
+</p>
 # UniSim - Cohort 3 Group 10 (Backlogged)
 
 This is the website for the UniSim Engineering group
