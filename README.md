@@ -1,4 +1,4 @@
-<p align="center"; width=20%; height=20%>
+<p align="center">
   <img src="images/backlogged.png" alt="Backlogged logo"/>
 </p>
 
