@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center"; border-radius: 10px>
   <img src="images/backlogged.png" alt="Backlogged logo"/>
 </p>
 
