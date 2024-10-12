@@ -1,5 +1,5 @@
-<p align="center"; border-radius: 10px>
-  <img src="images/backlogged.png" alt="Backlogged logo"/>
+<p align="center">
+  <img style="width:20%;height:50%" src="images/backlogged.png" alt="Backlogged logo"/>
 </p>
 
 # UniSim - Cohort 3 Group 10 (Backlogged)
