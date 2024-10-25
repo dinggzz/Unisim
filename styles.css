@@ -79,6 +79,7 @@ header {
   justify-content: center;
   background-color: #ffffff25;
   backdrop-filter: blur(15px);
+  box-shadow: 0px 5px 50px 2px #000000;
   transition: 0.3s ease;
 }
 
@@ -89,7 +90,7 @@ header .NavBar {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 5vw;
   transition: 0.5s ease-in-out;
 
 }
@@ -99,11 +100,15 @@ a {
   text-decoration: none;
 }
 
+.NavBarList {
+  position: relative;
+}
+
 
 
 .NavBar li {
   float: left;
-  padding: 22.5px;
+  padding: 22.5px 2.5vw;
   cursor: pointer;
 }
 
@@ -116,14 +121,15 @@ a {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: 0.5s;
   text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
 
 }
 
 .LogoNavBar {
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .LogoImg {
@@ -134,9 +140,14 @@ a {
 
 /* === NAVIGATION SECTION END === */
 
+#TopOfPage {
+  position: absolute;
+  top: 0px;
+}
 
 body {
   font-family: MainFont;
+  color: white;
 }
 
 .header {
@@ -144,7 +155,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  text-align: center;
 }
 
 .header img {
@@ -158,6 +168,35 @@ body {
   left: 2%;
   margin: auto;
   margin-left: 0;
+}
+
+.main-section {
+  padding: 2%
+}
+
+h2 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(40%);
+  background-position: center;
+  background-size: contain;
+
+}
+
+.backgroundGrad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000px;
+  aspect-ratio: 16/9;
+  z-index: 5;
+  background-image: linear-gradient(rgba(0,0,0,0) 60% , rgb(0,0,0) 100%);
 }
 
 .main-section {

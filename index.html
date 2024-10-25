@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>UniSim - Backlogged</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <nav class="NavBar">
-          <!--Text that goes to home screen when clicked-->
-          <a class="LogoNavBar" href="index.php#TopOfPage"><img class="LogoImg" src="images/backlogged_no_bg.png" alt=""></a>
-          <ul class="NavBarList">
-              <!--Options that form the navigation bar-->
-              <li><a class="NavBarHome" href="index.html">HOME</a></li>
-              <li><a class="NavBarAbout" href="index.html#download">DOWNLOAD</a></li>
-              <li><a class="NavBarTour" href="">DOCUMENTATION</a></li>
-              <!-- === CONTENT THAT CHANGES DEPENDENT ON LOGIN STATUS === -->
-          </ul>
-      </nav>
-      <hr>
+
+<head>
+  <title>UniSim - Backlogged</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="NavBar">
+      <!--Text that goes to home screen when clicked-->
+      <a class="LogoNavBar" href="index.php#TopOfPage"><img class="LogoImg" src="images/backlogged_no_title_no_background.png"
+          alt=""></a>
+      <ul class="NavBarList">
+        <!--Options that form the navigation bar-->
+        <li><a class="NavBarHome" href="index.html">HOME</a></li>
+        <li><a class="NavBarAbout" href="index.html#download">DOWNLOAD</a></li>
+        <li><a class="NavBarTour" href="">DOCUMENTATION</a></li>
+        <!-- === CONTENT THAT CHANGES DEPENDENT ON LOGIN STATUS === -->
+      </ul>
+    </nav>
+    <hr>
   </header>
-    <div class="header">
-      <img src="images/backlogged.png" alt="Backlogged logo">
-      <h1>UniSim - Cohort 3 Group 10 (Backlogged)</h1>
-    </div>
-    <div class="main-section">
+  <main class="MainContent">
+    <section class="OpeningContent" id="OpeningContent">
+      <!-- Used as an anchor so the back to top button works-->
+      <a id="TopOfPage"></a>
+      <div class="header">
+        <img src="images/backlogged_no_bg.png" alt="Backlogged logo">
+        <h1 class="MainTextLogo">
+          <span>BackLogged</span>
+          <span>UniSim - Cohort 3 Group 10</span>
+        </h1>
+      </div>
+      <div class="BackgroundImage" id="BackgroundImage">
+        <div class="backgroundGrad"></div>
+        <img class="backgroundImage" src="Images/placeholder_background.webp" alt="UniSim background">
+      </div>
       <h2>Main repository</h2>
       <p>
         This is the website for the UniSim Engineering group
@@ -33,8 +46,9 @@
       </p>
       <h2>Google Drive</h2>
       <p>
-        The <a href="https://drive.google.com/drive/folders/0AGIpRVjNIRTlUk9PVA">Google Drive</a> for the project contains all the documents and work completed over the weeks
+        The <a href="https://drive.google.com/drive/folders/0AGIpRVjNIRTlUk9PVA">Google Drive</a> for the project
+        contains all the documents and work completed over the weeks
       </p>
-    </div>
-  </body>
+</body>
+
 </html>
