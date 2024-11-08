@@ -116,7 +116,7 @@ a {
   backdrop-filter: blur(30px);
 }
 
-.NavBarHome, .NavBarTour, .NavBarLoginSignup, .NavBarAbout, .NavBarAdminDashboard, .NavBarLogout, .NavBarProfile, .LogoNavBar {
+.NavBarButton {
   display: block;
   text-align: center;
   text-transform: uppercase;
@@ -125,8 +125,36 @@ a {
   transition: 0.5s;
   text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
   color: white;
+}
+
+.NavBarButtonCurrent {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #a4ef86;
+  text-decoration-thickness: 3px;
+}
+
+.NavBarTitle{
+  margin: 5px;
+  position: relative;
+  top: 25%;
+  transform: translateX(15px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
 
 }
+
 
 .LogoNavBar {
   font-size: 1.5rem;
