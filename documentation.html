@@ -286,6 +286,98 @@
 
         </div>
 
+        <div class="SequenceDiagrams">
+          <h2>Sequence Diagrams</h2>
+          <details>
+            <summary>
+              Sequence Diagram
+            </summary>
+            <p>
+              <img src="documents/SequenceDiagrams/SequenceDiagrams.png" alt="Sequence Diagram">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Sequence Diagram UML code
+            </summary>
+            <p>
+              <code>
+                @startuml
+                !pragma teoz true
+                actor User
+                participant Main
+                participant TitleScreen
+                participant MapScreen
+                participant SettingsScreen
+                participant GameOverScreen
+                participant BuildingManager
+                participant InGameTimer
+                participant GamePreferences
+                participant Soundtrack
+                User -> Main: start game
+                activate Main
+                activate Soundtrack
+                activate InGameTimer
+                activate GamePreferences
+                Main -> Soundtrack : play()
+                Soundtrack <-> GamePreferences : getMusicVolume()
+                Soundtrack -> User : play soundtrack
+                Main -> TitleScreen : new TitleScreen()
+                activate TitleScreen
+                TitleScreen -> User : show()
+                User -> TitleScreen : Play
+                activate MapScreen
+                & TitleScreen -> MapScreen : new MapScreen()
+                & MapScreen -> BuildingManager : new BuildingManager()
+                activate BuildingManager
+                deactivate TitleScreen
+                MapScreen -> User : show()
+                User -> MapScreen : Pause
+                & MapScreen -> InGameTimer : userStopTime()
+                MapScreen -> MapScreen : change Pause icon to Resume icon
+                User -> MapScreen : choose building
+                & MapScreen -> BuildingManager : tryPlaceBuilding()
+                BuildingManager -> User : location choice mode
+                User -> BuildingManager : choose location
+                BuildingManager -> User : render building
+                User -> MapScreen : Resume
+                & MapScreen -> InGameTimer : userStartTime()
+                MapScreen -> MapScreen : change Resume icon to Pause icon
+                User -> MapScreen : Settings
+                & MapScreen -> InGameTimer :  systemStopTime()
+                MapScreen -> SettingsScreen : new SettingsScreen()
+                activate SettingsScreen
+                SettingsScreen -> User : show()
+                User -> SettingsScreen : Change music volume
+                & SettingsScreen -> GamePreferences : setMusicVolume()
+                SettingsScreen -> Soundtrack: play()
+                Soundtrack -> GamePreferences : getMusicVolume()
+                Soundtrack -> User : play soundtrack with new volume
+                User -> SettingsScreen : Back
+                SettingsScreen -> MapScreen : setScreen(previousScreen)
+                deactivate SettingsScreen
+                ...3 minutes later...
+                InGameTimer -> MapScreen : time expired
+                MapScreen -> GameOverScreen : new GameOverScreen()
+                activate GameOverScreen
+                deactivate MapScreen
+                deactivate BuildingManager
+                GameOverScreen -> Soundtrack : pause()
+                Soundtrack -> User : pause soundtrack
+                GameOverScreen -> User : show()
+                User -> GameOverScreen : Quit
+                GameOverScreen -> Main : exit()
+                deactivate InGameTimer
+                deactivate GamePreferences
+                deactivate GameOverScreen
+                deactivate Soundtrack
+                Main -> User : close game
+                deactivate Main
+                @enduml
+                </code>
+            </p>
+          </details>
+        </div>
       </div>
 </body>
 
