@@ -235,3 +235,8 @@ h2 {
 img:not(.backgroundImage) {
   max-width: 100%;
 }
+
+.documentation {
+  border: 3px dashed white;
+  text-align: center;
+}
