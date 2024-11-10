@@ -378,6 +378,51 @@
             </p>
           </details>
         </div>
+
+        <div class="StateDiagrams">
+          <h2>State Diagrams</h2>
+          <details>
+            <summary>
+              State Diagram
+            </summary>
+            <p>
+              <img src="documents/StateDiagrams/StateDiagram.png" alt="State Diagram">
+            </p>
+          </details>
+          <details>
+            <summary>
+              State Diagram UML code
+            </summary>
+            <p>
+              <code>
+                @startuml
+                hide empty description
+                [*] --> MainMenu
+                MainMenu --> Map : Play button
+                MainMenu --> SettingsMenu : Settings button
+                MainMenu --> [*] : Quit button
+                Map --> PausedMap : Pause button
+                Map --> BuildingSelection : choose a building
+                Map --> SettingsMenu : Settings button
+                Map --> GameOverMenu : timer expired
+                SettingsMenu --> SettingsMenu : change settings
+                SettingsMenu --> MainMenu : Back button
+                SettingsMenu --> Map : Back button
+                SettingsMenu --> PausedMap: Back button
+                PausedMap --> Map : Resume button
+                PausedMap --> BuildingSelection : choose a building
+                PausedMap --> SettingsMenu : Settings button
+                BuildingSelection --> Map: place a building
+                BuildingSelection --> PausedMap : place a building
+                GameOverMenu --> Map: Try Again button
+                GameOverMenu --> [*]: Exit button
+                @enduml
+                </code>
+            </p>
+          </details>
+        </div>
+
+
       </div>
 </body>
 
