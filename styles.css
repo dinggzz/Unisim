@@ -98,6 +98,7 @@ header .NavBar {
 
 a {
   text-decoration: none;
+  color: #63b4cf;
 }
 
 .NavBarList {
@@ -212,7 +213,7 @@ h2 {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
