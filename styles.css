@@ -231,3 +231,7 @@ h2 {
   margin-top: 1%;
   margin-bottom: 1%;
 }
+
+img:not(.backgroundImage) {
+  max-width: 100%;
+}
