@@ -12,8 +12,8 @@
   <header>
     <nav class="NavBar">
       <!--Text that goes to home screen when clicked-->
-      <a class="LogoNavBar" href="home.html#TopOfPage"><img class="LogoImg" src="images/backlogged_no_title_no_background.png"
-          alt=""></a>
+      <a class="LogoNavBar" href="home.html#TopOfPage"><img class="LogoImg"
+          src="images/backlogged_no_title_no_background.png" alt=""></a>
       <h1 class="NavBarTitle">UniverCity</h1>
       <ul class="NavBarList">
         <!--Options that form the navigation bar-->
@@ -41,7 +41,163 @@
         <img class="backgroundImage" src="images/placeholder_background.webp" alt="UniSim background">
       </div>
       <div class="main-section">
-        <h2>Documentation</h2>
+        <h1>Documentation</h1>
+        <div class="classDiagram">
+          <h2>Class Diagrams</h2>
+          <details>
+            <summary>
+              Final Version
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramFinal.png" alt="Final Version">
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Version 1
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramV1.png" alt="Version 1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Version 2
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramV2.png" alt="Version 2">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Version 3
+            </summary>
+            <p>
+              <img src="documents/ClassDiagrams/ClassDiagramV3.png" alt="Version 3">
+            </p>
+          </details>
+
+
+        </div>
+
+        <div class="componentDiagrams">
+          <h2>Component Diagrams</h2>
+          <details>
+            <summary>
+              Component Diagram
+            </summary>
+            <p>
+              <img src="documents/ComponentDiagrams/ComponentDiagrams.png" alt="Version 1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Component Diagram UML code
+            </summary>
+            <p>
+              <code>@startuml
+                package "User Interface" as ui {
+                  [TitleScreen] as ts
+                  [MapScreen] as ms
+                  [SettingsScreen] as ss
+                  [GameOverScreen] as go
+                }
+                package "Persistent Objects" as po {
+                  [Soundtrack] as st
+                  [GamePreferences] as gp
+                  [Constants] as cs
+                  [InGameTimer] as it
+                }
+                package "Buildings" as bd {
+                  [BuildingManager] as bm
+                  [BuildingRenderer] as br
+                  [BuildingFactory] as bf
+                  [BuildingPlacementManager] as bp
+                }
+                interface "Preferences profile" as pp
+                interface "Soundtrack file" as sf    
+                ui ..> gp : get preferences
+                ss ..> gp : set preferences
+                st ..> gp : get volume
+                gp --> pp : load/store
+                ui ..> st : play
+                go ..> st : pause
+                ms ..> it : update time
+                ui ..> cs : get constants
+                ms ..> bm : choose buildings
+                ms ..> br : render buildings
+                st --> sf : stream
+                bm ..> bp : place buildings
+                bm ..> bf : create buildings
+                br ..> bp : get placed buildings
+                @enduml
+                </code>
+            </p>
+          </details>
+
+        </div>
+        <div class="conceptArt">
+          <h2>Concept Art</h2>
+          <details>
+            <summary>
+              Logo Ideas
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/LogoIdeas.jpg" alt="Logo Ideas">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Logo V1
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/LogoV1.jpg" alt="Logo V1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Logo V2
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/LogoV2.jpg" alt="Logo V2">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Map V1
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/MapV1.jpg" alt="Map V1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Map V2
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/MapV2.jpg" alt="Map V2">
+            </p>
+          </details>
+          <details>
+            <summary>
+              Title Screen V1
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/TitleScreenV1.jpg" alt="Title Screen V1">
+            </p>
+          </details>
+          <details>
+            <summary>
+              TitleScreenV2
+            </summary>
+            <p>
+              <img src="documents/ConceptArt/TitleScreenV2.jpg" alt="Title Screen V2">
+            </p>
+          </details>
+
+        </div>
+
       </div>
 </body>
 
