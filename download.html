@@ -12,8 +12,8 @@
   <header>
     <nav class="NavBar">
       <!--Text that goes to home screen when clicked-->
-      <a class="LogoNavBar" href="home.html#TopOfPage"><img class="LogoImg" src="images/backlogged_no_title_no_background.png"
-          alt=""></a>
+      <a class="LogoNavBar" href="home.html#TopOfPage"><img class="LogoImg"
+          src="images/backlogged_no_title_no_background.png" alt=""></a>
       <h1 class="NavBarTitle">UniverCity</h1>
 
       <ul class="NavBarList">
@@ -43,8 +43,18 @@
       </div>
       <div class="main-section">
         <h2>Java Binary</h2>
+        <a id="downloadLink" href=".bin\UniverCity-vtest.jar" download>test.jar</a>
+
+        <script>
+          fetch("name.txt")
+            .then((res) => res.text())
+            .then((text) => {
+              document.getElementById("downloadLink").href = `.bin\\${text}`;
+              document.getElementById("downloadLink").innerHTML = text;
+            })
+            .catch((e) => console.error(e));
+        </script>
         <p>
-            <a href=".bin\UniverCity-vtest.jar" download>test.jar</a>
         </p>
       </div>
 </body>
