@@ -12,13 +12,15 @@
   <header>
     <nav class="NavBar">
       <!--Text that goes to home screen when clicked-->
-      <a class="LogoNavBar" href="index.html#TopOfPage"><img class="LogoImg" src="images/backlogged_no_title_no_background.png"
-          alt=""></a>
+      <a class="LogoNavBar" href="home.html#TopOfPage"><img class="LogoImg"
+          src="images/backlogged_no_title_no_background.png" alt=""></a>
+      <h1 class="NavBarTitle">UniverCity</h1>
+
       <ul class="NavBarList">
         <!--Options that form the navigation bar-->
-        <li><a class="NavBarHome" href="index.html">HOME</a></li>
-        <li><a class="NavBarAbout" href="index.html#download">DOWNLOAD</a></li>
-        <li><a class="NavBarTour" href="">DOCUMENTATION</a></li>
+        <li><a class="NavBarButton" href="home.html">HOME</a></li>
+        <li><a class="NavBarButtonCurrent" href="download.html">DOWNLOAD</a></li>
+        <li><a class="NavBarButton" href="documentation.html">DOCUMENTATION</a></li>
         <!-- === CONTENT THAT CHANGES DEPENDENT ON LOGIN STATUS === -->
       </ul>
     </nav>
@@ -37,18 +39,22 @@
       </div>
       <div class="BackgroundImage" id="BackgroundImage">
         <div class="backgroundGrad"></div>
-        <img class="backgroundImage" src="images/placeholder_background.webp" alt="UniSim background">
+        <img class="backgroundImage" src="images/mapBackgroundBlur.png" alt="UniSim background">
       </div>
       <div class="main-section">
-        <h2>Main repository</h2>
+        <h2>Java Binary</h2>
+        <a id="downloadLink" href=".bin\UniverCity-vtest.jar" download>test.jar</a>
+
+        <script>
+          fetch("name.txt")
+            .then((res) => res.text())
+            .then((text) => {
+              document.getElementById("downloadLink").href = `.bin\\${text}`;
+              document.getElementById("downloadLink").innerHTML = text;
+            })
+            .catch((e) => console.error(e));
+        </script>
         <p>
-          This is the website for the UniSim Engineering group
-          The repository with the code can be found <a href="https://github.com/TameU/eng1-cohort3-group10">here</a>
-        </p>
-        <h2>Google Drive</h2>
-        <p>
-          The <a href="https://drive.google.com/drive/folders/0AGIpRVjNIRTlUk9PVA">Google Drive</a> for the project
-          contains all the documents and work completed over the weeks
         </p>
       </div>
 </body>

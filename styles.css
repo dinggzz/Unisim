@@ -98,6 +98,7 @@ header .NavBar {
 
 a {
   text-decoration: none;
+  color: #63b4cf;
 }
 
 .NavBarList {
@@ -116,9 +117,36 @@ a {
   backdrop-filter: blur(30px);
 }
 
-.NavBarHome, .NavBarTour, .NavBarLoginSignup, .NavBarAbout, .NavBarAdminDashboard, .NavBarLogout, .NavBarProfile, .LogoNavBar {
+.NavBarButton {
   display: block;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
+}
+
+.NavBarButtonCurrent {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  transition: 0.5s;
+  text-shadow: 0 3px 20px rgba(4, 4, 4, 0.603);
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #a4ef86;
+  text-decoration-thickness: 3px;
+}
+
+.NavBarTitle{
+  margin: 5px;
+  position: relative;
+  top: 25%;
+  transform: translateX(15px);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.25rem;
@@ -128,12 +156,13 @@ a {
 
 }
 
+
 .LogoNavBar {
   font-size: 1.5rem;
 }
 
 .LogoImg {
-  position: relative;
+  position: absolute;
   height: 100%;
 }
 
@@ -155,6 +184,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  padding-top: 10vh;
 }
 
 .header img {
@@ -179,25 +209,19 @@ h2 {
   margin-bottom: 1%;
 }
 .backgroundImage {
-  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
   filter: brightness(40%);
-  background-position: center;
-  background-size: contain;
+  
 
 }
 
-.backgroundGrad {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1000px;
-  aspect-ratio: 16/9;
-  z-index: 5;
-  background-image: linear-gradient(rgba(0,0,0,0) 60% , rgb(0,0,0) 100%);
-}
 
 .main-section {
   padding: 2%
@@ -206,4 +230,13 @@ h2 {
 h2 {
   margin-top: 1%;
   margin-bottom: 1%;
+}
+
+img:not(.backgroundImage) {
+  max-width: 100%;
+}
+
+.documentation {
+  border: 3px dashed white;
+  text-align: center;
 }
