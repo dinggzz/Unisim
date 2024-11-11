@@ -43,13 +43,13 @@
       </div>
       <div class="main-section">
         <h2>Java Binary</h2>
-        <a id="downloadLink" href=".bin\Univer-City-1.0.0.jar" download>test.jar</a>
+        <a id="downloadLink" href="\Univer-City-v*.zip" download>test.jar</a>
 
         <script>
           fetch("name.txt")
             .then((res) => res.text())
             .then((text) => {
-              document.getElementById("downloadLink").href = `.bin\\${text}`;
+              document.getElementById("downloadLink").href = `${text}.zip`;
               document.getElementById("downloadLink").innerHTML = text;
             })
             .catch((e) => console.error(e));
