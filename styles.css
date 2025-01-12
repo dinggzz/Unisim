@@ -240,3 +240,15 @@ img:not(.backgroundImage) {
   border: 3px dashed white;
   text-align: center;
 }
+
+.documentaion-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.assessment {
+  flex: 1;
+  margin: 10px 10px;
+}
