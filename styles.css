@@ -252,3 +252,14 @@ img:not(.backgroundImage) {
   flex: 1;
   margin: 10px 10px;
 }
+
+.diagram-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.diagrams {
+  flex: 1;
+}
